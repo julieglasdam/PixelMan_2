@@ -20,12 +20,10 @@ typedef struct {
     int currentSprite;
     int direction;
     int onLedge;
-    short life;
+    int life;
 } Player;
 
-typedef struct {
-    int x, y, w, h;
-} Paths;
+
 
 
 /* Create instances of all structs, so they can be easy referenced,
@@ -34,13 +32,26 @@ typedef struct {
  having to initalize a new sdl texture every time*/
 typedef struct {
     float scrollX;
+    float scrollY;
     
     Player player;
-    Paths ledgetest;
+   
     
     // Textures
     SDL_Texture *texturePlayerSheet01;
+    SDL_Texture *tetxureHeartContainerOutline;
+    SDL_Texture *textureHeartContainer;
+    SDL_Texture *texturePath_1_a;
+    SDL_Texture *textureMountain_lvl1_01;
+    SDL_Texture *textureMountain_lvl1_02;
+    SDL_Texture *textureMountain_lvl1_03;
+    SDL_Texture *textureMountain_lvl1_04;
+    SDL_Texture *textureMountain_lvl1_05;
     
+    SDL_Texture *textCoordinates;
+   
     // Font
     TTF_Font *font;
+    
+    SDL_Renderer *renderer;
 } GameState;

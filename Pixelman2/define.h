@@ -14,4 +14,9 @@
 #define PLAYER_H 54
 #define GRAVITY 0.60f
 
+#define FONT_SIZE 16
+
+#define LEVEL_01_START 0
+#define LEVEL_01_END 1373
+
 
